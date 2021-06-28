@@ -1,0 +1,33 @@
+ child: Container(
+        padding: EdgeInsets.all(0.0),
+        margin: EdgeInsets.all(10.0),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(15.0)),
+          boxShadow: [
+            BoxShadow(
+                color: Colors.grey[500],
+                offset: Offset(2.0, 2.0),
+                blurRadius: 6.0,
+                spreadRadius: 0.5),
+            BoxShadow(
+                color: Colors.white,
+                offset: Offset(-2.0, -2.0),
+                blurRadius: 6.0,
+                spreadRadius: 0.5),
+          ],
+        ),
+        child: MaterialButton(
+          padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
+          child: Text(
+            "$text",
+            style: TextStyle(fontSize: 30.0),
+          ),
+          onPressed: () {
+            expText += text;
+          },
+          // elevation: 18.0,
+          // hoverElevation: 5.0,
+          // color: Color.fromRGBO(253, 253, 253, 1),
+          // highlightColor: Color.fromRGBO(253, 253, 253, 0),
+        ),
+      ),
